@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="D:\e-cafeteria\regcssvs.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script>
+            function validation()
+            {
+                
+            var username=document.getElementById("uname").value; var password1=document.getElementById("upass").value; 
+            
+            if(username=="")
+            {
+                document.getElementById("unameerror").innerHTML="please provide valid username";
+                setTimeout(function(){
+                document.getElementById("unameerror").innerHTML = '';
+                 }, 3000);
+            
+            }
+            else if(password1=="")
+            {
+                document.getElementById("upasserror").innerHTML="please provide password ";
+                setTimeout(function(){
+                document.getElementById("upasserror").innerHTML = '';
+                 }, 3000);
+            }
+          else if(password1.length<6)
+           {
+            document.getElementById("upasserror").innerHTML="please provide password of length atleast 6 characters";
+                setTimeout(function(){
+                document.getElementById("upasserror").innerHTML = '';
+                 }, 3000);
+           }
+             /*document.getElementById("alarmmsg").innerHTML = msg;
+    
+    setTimeout(function(){
+        document.getElementById("alarmmsg").innerHTML = '';
+    }, 3000);*/
+            }</script>
+    </head>
+<body>
+    <h1>
+   Login here!!!</h1>
+<div class="container">
+<form name="form1">
+<table  class="tb" >
+<tr>
+    <td>Username:</td>
+    <td><input type="text" name="uname" id="uname"></td>
+    </tr>
+    <tr><td colspan=2><p id="unameerror" style="color: red; text-align: center;" ></p></td></tr>
+    <tr>
+    <td>Password:</td>
+    <td><input type="password" name="upass" id="upass"></td>
+    <tr><td colspan=2><p id="upasserror" style="color: red; text-align: center;" ></p></td></tr>
+    </tr>
+
+<tr><td  style="padding-top: 10px;">
+</td>
+<td style="padding-top: 10px;"><input type="button" value="Login"></td>
+</tr>
+</table>
+</form>
+</div>
+</body>
+</html>
