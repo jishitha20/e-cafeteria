@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <title>E-Cafeteria </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://kit.fontawesome.com/0aca7bd66a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.4/axios.min.js" integrity="sha512-lTLt+W7MrmDfKam+r3D2LURu0F47a3QaW5nF0c6Hl0JDZ57ruei+ovbg7BrZ+0bjVJ5YgzsAWE+RreERbpPE1g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>  
+    <link rel="stylesheet" href="/css/menu.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+ <div class="container-fluid">
+   <a class="navbar-brand" href="#">E-CAFETERIA</a>
+   <div class="navbar-nav">
+    <p class="nav-item nav-link" id="user" style="font-size:25px;"></p>&nbsp;
+    <button id="todo" class="btn btn-primary" style = "background-color:brown">
+      <a href="\todo">Todo</a></button>
+ 
+    <button class="btn btn-primary" onclick="logout()" style = "background-color:brown">Logout</button>
+  </div>
+ </div>
+</nav>
+<div id="item1" class="itemcontent">
+  <div class="modal-header">
+    <h4 class="modal-title" >Item Details</h4>
+    <button type="button" class="close" data-dismiss="modal">&times;</button>
+  </div>
+  <div class="modal-body">
+    <!-- <form action="" method="post"> -->
+      <input id="contestname" name="contestname" type="text" class="form-control" placeholder="Item Name" style="font-size: medium;">
+      <br>
+      <input id="descp" name="descp" type="text" class="form-control" placeholder="Price" style="font-size: medium;">
+      <br>
+      <input id="organisation" name="organisation" type="text" class="form-control" placeholder="URL" style="font-size: medium;" >
+      <br>
+      <button id="formSubmit" class="btn btn-primary btn-block" style="font-size: large;white-space: normal;">Submit</button>
+    <!-- </form> -->
+  </div>
+  
+</div>
+<div id="wrap">
+  
+	<div id="new_list" class="columns_4"></div>
+
+    
+	<div id="columns" class="columns_4">
+  <figure class="fig">
+  <!--<img src="/img/dosa.jpg">
+	<figcaption>Dosa</figcaption>
+    <span class="price">Price: Rs.1/-</span>
+    <a class="button" href="#"  onclick="buy(this)">Buy Now</a>-->
+    
+	</figure>
+
+<!--	<figure>
+<img src="/img/puri.jpg">
+	<figcaption>Puri</figcaption>
+    <span class="price">Price: Rs.1/-</span>
+    <a class="button" href="#"  onclick="buy(this)">Buy Now</a>
+	</figure>-->
+
+  <!--<figure>
+	<img src="/img/idli.jpg">
+	<figcaption>Idli </figcaption>
+    <span class="price">Price: Rs.1/-</span>
+    <a class="button" href="#" onclick="buy(this)">Buy Now</a>
+	</figure>-->
+
+<!--	<figure>
+	<img src="/img/bonda.jpg">
+	<figcaption>Bonda</figcaption>
+    <span class="price">Price: Rs.1/-</span>
+    <a class="button" href="#" onclick="buy(this)">Buy Now</a>
+	</figure>-->
+  </div>
+	<div id="columns" class="columns_4">
+  <!--<figure>
+	 <img src="/img/cmrmeals.jpg">
+	<figcaption>Meals</figcaption>
+    <span class="price">Price: Rs.1/-</span>
+    <a class="button" href="#" onclick="buy(this)">Buy Now</a>
+	</figure>-->
+
+<!--- <figure>
+ <img src="/img/chickenmanchuria.jpg">
+	<figcaption>Chicken Manchuria</figcaption>
+     <span class="price">Price: Rs.1/-</span>
+     <a class="button" href="#"  onclick="buy(this)">Buy Now</a>
+	</figure>-->
+
+	<!--<figure>
+	<img src="/img/eggfriedrice.jpg">
+	<figcaption>Egg friedrice</figcaption>
+    <span class="price">Price: Rs.1/-</span> 
+    <a class="button" href="#" onclick="buy(this)">Buy Now</a>
+	</figure>-->
+
+  <figure>
+	<img src="/img/manchuria.jpg">
+	<figcaption>veg manchuria</figcaption>
+     <span class="price">Price: Rs.1/-</span>
+     <a class="button" href="#" onclick="buy(this)">Buy Now</a>
+	</figure>
+</div>
+</div>
+<script>
+  var rzp1;
+  var itemid;
+ 
+ function buy(id){
+   itemid=id;
+  let uid=JSON.parse(localStorage.getItem("userDetails"));
+            uid=uid.userId;
+            console.log(itemid);
+            console.log(uid);
+  axios.post("/order").then((info)=>
+  {
+      console.log(info);
+      var options = {
+  "key": "rzp_test_QJ6Y7G3p1zOqrc", // Enter the Key ID generated from the Dashboard
+  "name": "Purchase",
+  "description": "Test Transaction",
+  "image": "https://example.com/your_logo",
+  "order_id": info.data.id, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
+  "callback_url": "/is-order-complete/"+itemid+"/"+uid,
+  "theme": {
+      "color": "#3399cc"
+  }
+};
+
+rzp1 = new Razorpay(options);
+rzp1.open();
+
+})
+}
+
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<script src="/js/menu.js"></script>
+<script src="/js/additem.js"></script>
+
+  </body>
+</html>
